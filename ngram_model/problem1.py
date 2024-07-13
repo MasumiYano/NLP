@@ -33,17 +33,17 @@ def build_unigram_model(word_dict, output_file):
             file.write(f"P({word}) {probability}\n")
 
 
-def evaluate_unigram_model(word_dict, test_sentence, output_file):
+def evaluate_unigram_model(word_dict, test_sentences, output_file):
     total_count = sum(word_dict.values())
     word_probs = {word: count / total_count for word, count in word_dict.items()}
 
     with open(output_file, 'w') as file:
-        for sentence in test_sentence:
+        for sentence in test_sentences:
             words = sentence.lower().split()
             sent_prob = 1.0
             for word in words:
                 if word in word_probs:
-                    sent_prob += word_probs[word]
+                    sent_prob *= word_probs[word]
                 else:
                     sent_prob *= 0
             file.write(f"{sent_prob}\n")
@@ -52,9 +52,15 @@ def evaluate_unigram_model(word_dict, test_sentence, output_file):
 def calculate_perplexity(prob_file, N):
     with open(prob_file, 'r') as file:
         probs = [float(line.strip()) for line in file]
-        product = math.prod(probs)
-        perplexity = product ** (-1 / N)
-        return perplexity
+
+    # zero probabilities
+    non_zero_probs = [p for p in probs if p > 0]
+    if not non_zero_probs:
+        return float('inf')
+
+    product = math.prod(non_zero_probs)
+    perplexity = product ** (-1 / N)
+    return perplexity
 
 
 def main():
@@ -62,7 +68,7 @@ def main():
     sentences = read_files(file_paths)
     train_sentences, test_sentences = split_data(sentences)
     word_dict = create_word_dictionary(train_sentences)
-    build_unigram_model(word_dict, 'unigram_prob.txt')
+    build_unigram_model(word_dict, 'unigram_probs.txt')
     evaluate_unigram_model(word_dict, test_sentences, 'unigram_eval.txt')
     perplexity = calculate_perplexity('unigram_eval.txt', len(test_sentences))
     print(f"Unigram Model Perplexity: {perplexity}")

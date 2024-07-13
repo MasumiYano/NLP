@@ -1,7 +1,6 @@
 import math
-
-from problem1 import read_files, split_data
 from collections import defaultdict
+from problem1 import read_files, split_data
 
 
 def create_bigram_dict(sentences):
@@ -41,14 +40,19 @@ def evaluate_bigram_model(bigram_dict, word_dict, test_sentences, output_file):
                     else:
                         sent_prob *= 0
                 prev_word = word
-
             file.write(f"{sent_prob}\n")
 
 
 def calculate_perplexity(prob_file, N):
     with open(prob_file, 'r') as file:
         probs = [float(line.strip()) for line in file]
-    product = math.prod(probs)
+
+    # Handle zero probabilities
+    non_zero_probs = [p for p in probs if p > 0]
+    if not non_zero_probs:
+        return float('inf')
+
+    product = math.prod(non_zero_probs)
     perplexity = product ** (-1 / N)
     return perplexity
 
@@ -58,7 +62,7 @@ def main():
     sentences = read_files(file_paths)
     train_sentences, test_sentences = split_data(sentences)
     bigram_dict, word_dict = create_bigram_dict(train_sentences)
-    build_bigram_model(bigram_dict, word_dict, "bigram_prob.txt")
+    build_bigram_model(bigram_dict, word_dict, "bigram_probs.txt")
     evaluate_bigram_model(bigram_dict, word_dict, test_sentences, 'bigram_eval.txt')
     perplexity = calculate_perplexity('bigram_eval.txt', len(test_sentences))
     print(f"Bigram Model Perplexity: {perplexity}")

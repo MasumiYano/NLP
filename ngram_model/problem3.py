@@ -1,7 +1,10 @@
-from problem2 import *
+import math
+from collections import defaultdict
+from problem1 import read_files, split_data
+from problem2 import create_bigram_dict
 
 
-def smoothed_bigram_model(bigram_dict, word_dict, output_file, delta=0.01):
+def smoothed_bigram_model(bigram_dict, word_dict, output_file, delta=0.1):
     with open(output_file, 'w') as file:
         for (prev_word, word), count in bigram_dict.items():
             smoothed_count = count + delta
@@ -15,22 +18,28 @@ def evaluate_smoothed_bigram_model(bigram_dict, word_dict, test_sentences, outpu
         for sentence in test_sentences:
             words = sentence.lower().split()
             sent_prob = 1.0
-            previous_word = None
+            prev_word = None
             for word in words:
-                if previous_word is not None:
-                    bigram = (previous_word, word)
+                if prev_word is not None:
+                    bigram = (prev_word, word)
                     smoothed_count = bigram_dict[bigram] + delta if bigram in bigram_dict else delta
-                    smoothed_total_count = word_dict[previous_word] + (delta * len(word_dict))
+                    smoothed_total_count = word_dict[prev_word] + (delta * len(word_dict))
                     probability = smoothed_count / smoothed_total_count
                     sent_prob *= probability
-                previous_word = word
+                prev_word = word
             file.write(f"{sent_prob}\n")
 
 
 def calculate_perplexity(prob_file, N):
     with open(prob_file, 'r') as file:
         probs = [float(line.strip()) for line in file]
-    product = math.prod(probs)
+
+    # Handle zero probabilities
+    non_zero_probs = [p for p in probs if p > 0]
+    if not non_zero_probs:
+        return float('inf')
+
+    product = math.prod(non_zero_probs)
     perplexity = product ** (-1 / N)
     return perplexity
 
@@ -40,9 +49,9 @@ def main():
     sentences = read_files(file_paths)
     train_sentences, test_sentences = split_data(sentences)
     bigram_dict, word_dict = create_bigram_dict(train_sentences)
-    smoothed_bigram_model(bigram_dict, word_dict, "smooth_prob.txt")
-    evaluate_bigram_model(bigram_dict, word_dict, test_sentences, 'smooth_eval.txt')
-    perplexity = calculate_perplexity('smooth_eval.txt', len(test_sentences))
+    smoothed_bigram_model(bigram_dict, word_dict, "smooth_probs.txt", delta=0.1)
+    evaluate_smoothed_bigram_model(bigram_dict, word_dict, test_sentences, 'smoothed_eval.txt', delta=0.1)
+    perplexity = calculate_perplexity('smoothed_eval.txt', len(test_sentences))
     print(f"Smoothed Bigram Model Perplexity: {perplexity}")
 
 
