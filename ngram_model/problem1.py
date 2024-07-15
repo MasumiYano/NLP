@@ -1,5 +1,5 @@
 import math
-import random
+import re
 from collections import defaultdict
 
 
@@ -16,10 +16,14 @@ def split_data(sentences, train_ratio=0.8):
     return sentences[:split_index], sentences[split_index:]
 
 
+def tokenize(text):
+    return re.findall(r"\b\w+\b|[.,!?;()]", text.lower())
+
+
 def create_word_dictionary(sentences):
     word_freq = defaultdict(int)
     for sentence in sentences:
-        words = sentence.lower().split()
+        words = tokenize(sentence)
         for word in words:
             word_freq[word] += 1
     return word_freq
@@ -39,26 +43,29 @@ def evaluate_unigram_model(word_dict, test_sentences, output_file):
 
     with open(output_file, 'w') as file:
         for sentence in test_sentences:
-            words = sentence.lower().split()
+            words = tokenize(sentence)
             sent_prob = 1.0
             for word in words:
                 if word in word_probs:
                     sent_prob *= word_probs[word]
                 else:
-                    sent_prob *= 0
-            file.write(f"{sent_prob}\n")
+                    sent_prob = 0
+                    break
+            file.write(f"p({sentence.strip()}) = {sent_prob}\n")
 
 
 def calculate_perplexity(prob_file, N):
     with open(prob_file, 'r') as file:
-        probs = [float(line.strip()) for line in file]
+        probs = [float(line.split('=')[-1].strip()) for line in file]
 
-    # zero probabilities
     non_zero_probs = [p for p in probs if p > 0]
     if not non_zero_probs:
         return float('inf')
 
     product = math.prod(non_zero_probs)
+    if product == 0:
+        return float('inf')
+
     perplexity = product ** (-1 / N)
     return perplexity
 
@@ -67,6 +74,7 @@ def main():
     file_paths = ['doyle_Bohemia.txt']
     sentences = read_files(file_paths)
     train_sentences, test_sentences = split_data(sentences)
+    # print(test_sentences)
     word_dict = create_word_dictionary(train_sentences)
     build_unigram_model(word_dict, 'unigram_probs.txt')
     evaluate_unigram_model(word_dict, test_sentences, 'unigram_eval.txt')

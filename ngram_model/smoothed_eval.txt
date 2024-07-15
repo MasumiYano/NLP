@@ -1,216 +1,216 @@
-3.47778625186143e-42
-6.546932692532326e-31
-1.0
-1.1614490557532467e-12
-1.0
-1.9887799641353804e-47
-1.9017783759775666e-34
-2.939485114734613e-38
-1.837886786910143e-42
-2.3673046062372947e-25
-1.0
-2.589348685769676e-14
-1.0
-1.5680299538062706e-40
-3.210840249462814e-44
-1.1727730896071467e-31
-1.774371011353493e-30
-9.621472711484745e-42
-4.771171481084421e-38
-8.284217793533676e-42
-1.0720754414794012e-44
-1.2051905996104146e-42
-1.8270112331137688e-31
-1.410791722283428e-37
-4.79293126230328e-36
-9.126703098451115e-44
-1.3929905322912814e-34
-7.001260352861029e-40
-1.1028660799382094e-36
-4.467813054066983e-38
-5.210200677598157e-30
-1.0
-9.093658753497326e-10
-1.0
-2.8388601826837003e-30
-9.691268444165842e-46
-2.5365696872574845e-33
-6.416156399556206e-42
-2.6253140442974053e-34
-1.0
-2.455051056669932e-12
-1.0
-1.7950203868542837e-40
-2.7368096969544333e-38
-1.3568640912151275e-39
-1.0
-1.0
-1.0231331723699673e-34
-1.0020218290470368e-29
-1.0
-7.461688099746912e-11
-1.0
-1.007805513349081e-36
-6.3492533171375e-39
-1.0
-6.169608816192256e-36
-4.373327736626699e-34
-1.0
-1.0
-1.0
-1.0
-2.0577843638502637e-44
-4.247726353809699e-34
-1.0
-1.0
-1.2961829022544745e-34
-6.523899025283503e-19
-1.0
-0.0004116920543433512
-1.0
-3.592453920714419e-08
-1.0
-1.430270850390939e-06
-1.0
-2.432444744104391e-24
-1.0
-1.4890886784552697e-13
-1.0
-1.9248029952154527e-14
-1.0
-6.088381629449906e-34
-1.275087611051169e-09
-1.0
-9.94859558606826e-18
-1.0
-0.0004170141784820684
-1.0
-1.0
-1.0
-9.39526088008791e-08
-1.0
-1.2525846054320717e-16
-1.0
-1.139716010076885e-13
-1.0
-6.65725083316489e-18
-1.0
-4.51119697067497e-11
-1.0
-1.2993827597226982e-35
-7.079955620034356e-39
-7.0755657274219e-38
-1.5748289420803113e-07
-1.0
-4.980346627182469e-41
-2.555319086323694e-38
-6.948334075623993e-29
-1.0
-2.0389368415968212e-38
-8.409630331402506e-36
-1.0
-1.0
-2.5946089771481278e-21
-1.0
-3.01387718751779e-34
-1.580278936138796e-14
-1.0
-9.532719487750782e-37
-5.025870461296515e-38
-0.00016625103906899418
-1.0
-6.49171351000143e-27
-9.545213317586352e-25
-1.0
-9.44822373393802e-08
-1.0
-1.6180399849125247e-30
-1.0
-1.8261967706376404e-35
-9.509024302100874e-28
-8.892658137573782e-32
-1.595916744284526e-34
-4.357242613981025e-35
-3.7277726082433733e-34
-1.0581146989200293e-37
-1.5573124273168115e-36
-9.497369980394548e-46
-3.4727537672937344e-28
-1.0
-3.188934715301588e-35
-1.6406861841861455e-35
-1.0215055244288294e-32
-1.772607561488216e-35
-2.972822243550687e-33
-1.5627616624457032e-41
-1.0791360087562551e-37
-4.116303893590271e-41
-1.0451841976269718e-34
-1.1125123695540085e-35
-9.406283564857616e-36
-1.8698934398484666e-36
-1.6450303072217131e-13
-1.0
-3.892786889702098e-36
-2.4348061208562593e-32
-1.0751632849009404e-31
-6.448255655419742e-16
-1.0
-1.0189559210778968e-38
-3.676191276032359e-35
-9.396002742184527e-32
-2.5055347980861892e-50
-3.8151703393614243e-34
-1.7340265224668104e-36
-1.0273452641851476e-35
-1.666878108309618e-37
-4.639233111041975e-23
-1.0
-1.0
-1.5703389356745203e-07
-1.0
-6.143676988465874e-11
-1.0
-1.0
-6.845322799566994e-41
-2.6618132895514035e-42
-4.929072444925343e-44
-5.647897481715439e-16
-1.0
-8.019034044261931e-42
-2.188021474530543e-34
-6.203740289031816e-36
-0.0003938558487593541
-1.0
-2.1982293098392347e-38
-5.442748960662291e-37
-1.560234839184384e-19
-1.0
-5.250163735175046e-25
-1.0
-1.1328332229893822e-43
-3.358534779592224e-40
-7.694549814251169e-25
-1.0
-4.59805607302444e-28
-0.018240343347639482
-1.0
-1.142484718004033e-16
-1.0
-0.0003808073115003808
-1.0
-3.5577620515035074e-19
-1.0
-1.0378741814472689e-25
-1.0
-3.992144790811468e-38
-7.043770422827951e-39
-3.878406976931357e-34
-5.592519550569826e-35
-1.0
-6.4843007710992e-40
-5.512147850138112e-44
-6.911238943154283e-42
-4.875674096937672e-46
-5.689652741138151e-33
-3.532829453088258e-10
+p(palm of my hand. I rushed forward, fell down, clapped my hand to my) = 6.023328297656444e-40
+p(face, and became a piteous spectacle. It is an old trick.”) = 7.8735545066617e-30
+p() = 1.0
+p(“That also I could fathom.”) = 2.6116263738215857e-12
+p() = 1.0
+p(“Then they carried me in. She was bound to have me in. What else could) = 4.388805903119124e-46
+p(she do? And into her sitting-room, which was the very room which I) = 2.3415645199064758e-33
+p(suspected. It lay between that and her bedroom, and I was determined to) = 4.488703333695166e-37
+p(see which. They laid me on a couch, I motioned for air, they were) = 3.0169723472887754e-41
+p(compelled to open the window, and you had your chance.”) = 1.5164835143320487e-25
+p() = 1.0
+p(“How did that help you?”) = 6.569350356092613e-14
+p() = 1.0
+p(“It was all-important. When a woman thinks that her house is on fire,) = 4.1768357912521505e-38
+p(her instinct is at once to rush to the thing which she values most. It) = 6.022782143454139e-42
+p(is a perfectly overpowering impulse, and I have more than once taken) = 1.201143914737515e-30
+p(advantage of it. In the case of the Darlington Substitution Scandal it) = 1.3408369128186591e-30
+p(was of use to me, and also in the Arnsworth Castle business. A married) = 8.722029819904724e-43
+p(woman grabs at her baby; an unmarried one reaches for her jewel-box.) = 5.788437300976449e-37
+p(Now it was clear to me that our lady of to-day had nothing in the house) = 6.404249828083004e-40
+p(more precious to her than what we are in quest of. She would rush to) = 4.3052694357998835e-43
+p(secure it. The alarm of fire was admirably done. The smoke and shouting) = 5.41190522607595e-39
+p(were enough to shake nerves of steel. She responded beautifully. The) = 1.3678079048343333e-32
+p(photograph is in a recess behind a sliding panel just above the right) = 1.5139730693005297e-36
+p(bell-pull. She was there in an instant, and I caught a glimpse of it as) = 1.938440983821466e-35
+p(she half drew it out. When I cried out that it was a false alarm, she) = 1.8275372417613277e-42
+p(replaced it, glanced at the rocket, rushed from the room, and I have) = 1.5489227644290363e-33
+p(not seen her since. I rose, and, making my excuses, escaped from the) = 8.807092901782677e-39
+p(house. I hesitated whether to attempt to secure the photograph at once;) = 2.7236376088512464e-35
+p(but the coachman had come in, and as he was watching me narrowly, it) = 5.416356352394527e-37
+p(seemed safer to wait. A little over-precipitance may ruin all.”) = 3.605550871239931e-29
+p() = 1.0
+p(“And now?” I asked.) = 7.630847071420118e-11
+p() = 1.0
+p(“Our quest is practically finished. I shall call with the King) = 3.2451522275612796e-29
+p(to-morrow, and with you, if you care to come with us. We will be shown) = 1.952669305674633e-44
+p(into the sitting-room to wait for the lady, but it is probable that) = 5.398177727963413e-33
+p(when she comes she may find neither us nor the photograph. It might be) = 1.543674335026079e-41
+p(a satisfaction to his Majesty to regain it with his own hands.”) = 1.6750150922324298e-33
+p() = 1.0
+p(“And when will you call?”) = 4.867918109056091e-13
+p() = 1.0
+p(“At eight in the morning. She will not be up, so that we shall have a) = 5.244346493524241e-40
+p(clear field. Besides, we must be prompt, for this marriage may mean a) = 4.3964380519165426e-36
+p(complete change in her life and habits. I must wire to the King without) = 2.2007255568916938e-38
+p(delay.”) = 1.0
+p() = 1.0
+p(We had reached Baker Street and had stopped at the door. He was) = 2.0770059610278207e-33
+p(searching his pockets for the key when someone passing said:) = 6.379728527118686e-29
+p() = 1.0
+p(“Good-night, Mister Sherlock Holmes.”) = 1.540806565932947e-10
+p() = 1.0
+p(There were several people on the pavement at the time, but the greeting) = 8.731755423854687e-36
+p(appeared to come from a slim youth in an ulster who had hurried by.) = 8.723618867568179e-38
+p() = 1.0
+p(“I’ve heard that voice before,” said Holmes, staring down the dimly lit) = 5.733249063445115e-36
+p(street. “Now, I wonder who the deuce that could have been.”) = 2.7979677886508346e-33
+p() = 1.0
+p() = 1.0
+p(III.) = 1.0
+p() = 1.0
+p(I slept at Baker Street that night, and we were engaged upon our toast) = 1.0905615403603311e-40
+p(and coffee in the morning when the King of Bohemia rushed into the) = 5.083002976975972e-31
+p(room.) = 1.0
+p() = 1.0
+p(“You have really got it!” he cried, grasping Sherlock Holmes by either) = 8.140094210588596e-36
+p(shoulder and looking eagerly into his face.) = 1.9082503236078673e-19
+p() = 1.0
+p(“Not yet.”) = 0.0005313496280552603
+p() = 1.0
+p(“But you have hopes?”) = 7.919710000713785e-09
+p() = 1.0
+p(“I have hopes.”) = 2.274145512565109e-07
+p() = 1.0
+p(“Then, come. I am all impatience to be gone.”) = 1.8879274626616963e-23
+p() = 1.0
+p(“We must have a cab.”) = 3.243906047702474e-13
+p() = 1.0
+p(“No, my brougham is waiting.”) = 4.285187623591606e-14
+p() = 1.0
+p(“Then that will simplify matters.” We descended and started off once) = 4.8470341428054304e-33
+p(more for Briony Lodge.) = 1.1303796060868703e-10
+p() = 1.0
+p(“Irene Adler is married,” remarked Holmes.) = 2.7833346582916776e-17
+p() = 1.0
+p(“Married! When?”) = 0.0005277044854881266
+p() = 1.0
+p(“Yesterday.”) = 1.0
+p() = 1.0
+p(“But to whom?”) = 1.3724433952877156e-07
+p() = 1.0
+p(“To an English lawyer named Norton.”) = 3.9747034655047817e-16
+p() = 1.0
+p(“But she could not love him.”) = 3.052530438418461e-14
+p() = 1.0
+p(“I am in hopes that she does.”) = 3.3732445191340667e-19
+p() = 1.0
+p(“And why in hopes?”) = 8.527695930885176e-11
+p() = 1.0
+p(“Because it would spare your Majesty all fear of future annoyance. If) = 2.6236729338658467e-34
+p(the lady loves her husband, she does not love your Majesty. If she does) = 1.8760326757706376e-39
+p(not love your Majesty, there is no reason why she should interfere with) = 9.185079436734478e-38
+p(your Majesty’s plan.”) = 2.4322070917321496e-07
+p() = 1.0
+p(“It is true. And yet—! Well! I wish she had been of my own station!) = 1.7563981141549025e-41
+p(What a queen she would have made!” He relapsed into a moody silence,) = 3.246812485472938e-37
+p(which was not broken until we drew up in Serpentine Avenue.) = 4.926935052061338e-28
+p() = 1.0
+p(The door of Briony Lodge was open, and an elderly woman stood upon the) = 8.883655719429493e-37
+p(steps. She watched us with a sardonic eye as we stepped from the) = 9.687332115801055e-35
+p(brougham.) = 1.0
+p() = 1.0
+p(“Mr. Sherlock Holmes, I believe?” said she.) = 8.267770521184936e-21
+p() = 1.0
+p(“I am Mr. Holmes,” answered my companion, looking at her with a) = 4.7715858759671834e-35
+p(questioning and rather startled gaze.) = 3.4014205701798024e-14
+p() = 1.0
+p(“Indeed! My mistress told me that you were likely to call. She left) = 8.201755970520974e-36
+p(this morning with her husband by the 5:15 train from Charing Cross for) = 1.5205537721476988e-36
+p(the Continent.”) = 0.00017815784785319796
+p() = 1.0
+p(“What!” Sherlock Holmes staggered back, white with chagrin and) = 6.900745055772765e-26
+p(surprise. “Do you mean that she has left England?”) = 4.3047419324816675e-24
+p() = 1.0
+p(“Never to return.”) = 1.3251000450534018e-07
+p() = 1.0
+p(“And the papers?” asked the King hoarsely. “All is lost.”) = 1.0818785639445329e-29
+p() = 1.0
+p(“We shall see.” He pushed past the servant and rushed into the) = 1.4433823552641603e-34
+p(drawing-room, followed by the King and myself. The furniture was) = 5.609515086549498e-27
+p(scattered about in every direction, with dismantled shelves and open) = 5.13559171381956e-31
+p(drawers, as if the lady had hurriedly ransacked them before her flight.) = 3.2754573526029965e-33
+p(Holmes rushed at the bell-pull, tore back a small sliding shutter, and,) = 3.516063586989789e-34
+p(plunging in his hand, pulled out a photograph and a letter. The) = 2.265378444834085e-34
+p(photograph was of Irene Adler herself in evening dress, the letter was) = 4.9588170167827285e-34
+p(superscribed to “Sherlock Holmes, Esq. To be left till called for.” My) = 1.4443899862631002e-35
+p(friend tore it open, and we all three read it together. It was dated at) = 1.1963312536987815e-43
+p(midnight of the preceding night and ran in this way:) = 1.9901156753075422e-27
+p() = 1.0
+p(“MY DEAR MR. SHERLOCK HOLMES,—You really did it very well. You took) = 2.4957303205375127e-35
+p(me in completely. Until after the alarm of fire, I had not a) = 1.0835676629518175e-35
+p(suspicion. But then, when I found how I had betrayed myself, I) = 8.626647646413534e-32
+p(began to think. I had been warned against you months ago. I had) = 1.2436382172564227e-34
+p(been told that, if the King employed an agent, it would certainly) = 2.837071137775684e-32
+p(be you. And your address had been given me. Yet, with all this, you) = 1.8356417318090607e-41
+p(made me reveal what you wanted to know. Even after I became) = 6.091326271074922e-38
+p(suspicious, I found it hard to think evil of such a dear, kind old) = 3.488147062048188e-40
+p(clergyman. But, you know, I have been trained as an actress myself.) = 8.008799892082197e-34
+p(Male costume is nothing new to me. I often take advantage of the) = 2.145335598669921e-37
+p(freedom which it gives. I sent John, the coachman, to watch you,) = 4.8746956591841174e-36
+p(ran upstairs, got into my walking clothes, as I call them, and came) = 7.900084736911586e-37
+p(down just as you departed.) = 3.1269049477483097e-13
+p() = 1.0
+p(“Well, I followed you to your door, and so made sure that I was) = 7.228879732981091e-36
+p(really an object of interest to the celebrated Mr. Sherlock Holmes.) = 1.5922435664183105e-30
+p(Then I, rather imprudently, wished you good-night, and started for) = 5.145349079316318e-31
+p(the Temple to see my husband.) = 2.7606958330085906e-14
+p() = 1.0
+p(“We both thought the best resource was flight, when pursued by so) = 8.365973085375556e-38
+p(formidable an antagonist; so you will find the nest empty when you) = 4.679803362700667e-33
+p(call to-morrow. As to the photograph, your client may rest in) = 6.2340884799843436e-30
+p(peace. I love and am loved by a better man than he. The King may do) = 4.0577768101470905e-49
+p(what he will without hindrance from one whom he has cruelly) = 2.2832966652847173e-33
+p(wronged. I keep it only to safeguard myself, and to preserve a) = 9.015398665890413e-36
+p(weapon which will always secure me from any steps which he might) = 7.858203725176034e-35
+p(take in the future. I leave a photograph which he might care to) = 1.0706273271693499e-36
+p(possess; and I remain, dear Mr. Sherlock Holmes,) = 1.688337391893303e-22
+p() = 1.0
+p() = 1.0
+p(“Very truly yours,) = 2.4183083352800714e-07
+p() = 1.0
+p(“IRENE NORTON, _née_ ADLER.”) = 1.1866068857914747e-10
+p() = 1.0
+p() = 1.0
+p(“What a woman—oh, what a woman!” cried the King of Bohemia, when we had) = 7.932234140277865e-40
+p(all three read this epistle. “Did I not tell you how quick and resolute) = 4.157766898964341e-41
+p(she was? Would she not have made an admirable queen? Is it not a pity) = 1.9411616732314427e-42
+p(that she was not on my level?”) = 1.4444677533494016e-15
+p() = 1.0
+p(“From what I have seen of the lady, she seems, indeed, to be on a very) = 9.254989510314979e-41
+p(different level to your Majesty,” said Holmes coldly. “I am sorry that) = 1.0645084195473128e-34
+p(I have not been able to bring your Majesty’s business to a more) = 8.502182872070095e-35
+p(successful conclusion.”) = 0.0004873294346978557
+p() = 1.0
+p(“On the contrary, my dear sir,” cried the King; “nothing could be more) = 1.6528137223375908e-38
+p(successful. I know that her word is inviolate. The photograph is now as) = 1.44009679510309e-35
+p(safe as if it were in the fire.”) = 4.272369546349762e-19
+p() = 1.0
+p(“I am glad to hear your Majesty say so.”) = 8.6208858048482e-26
+p() = 1.0
+p(“I am immensely indebted to you. Pray tell me in what way I can reward) = 3.784513783637746e-44
+p(you. This ring—” He slipped an emerald snake ring from his finger and) = 3.2491682470749216e-39
+p(held it out upon the palm of his hand.) = 2.6908107444805415e-23
+p() = 1.0
+p(“Your Majesty has something which I should value even more highly,”) = 1.3381928790896077e-28
+p(said Holmes.) = 0.00042535091450446614
+p() = 1.0
+p(“You have but to name it.”) = 8.979633719157828e-18
+p() = 1.0
+p(“This photograph!”) = 0.00048262548262548264
+p() = 1.0
+p(The King stared at him in amazement.) = 2.1419927757274665e-18
+p() = 1.0
+p(“Irene’s photograph!” he cried. “Certainly, if you wish it.”) = 5.481371901295328e-25
+p() = 1.0
+p(“I thank your Majesty. Then there is no more to be done in the matter.) = 4.708717337770581e-38
+p(I have the honour to wish you a very good morning.” He bowed, and,) = 4.771853955217295e-38
+p(turning away without observing the hand which the King had stretched) = 2.6097309910420322e-33
+p(out to him, he set off in my company for his chambers.) = 3.05993100804701e-35
+p() = 1.0
+p(And that was how a great scandal threatened to affect the kingdom of) = 4.0396231707917834e-39
+p(Bohemia, and how the best plans of Mr. Sherlock Holmes were beaten by a) = 1.055053189059709e-41
+p(woman’s wit. He used to make merry over the cleverness of women, but I) = 5.523551378427147e-42
+p(have not heard him do it of late. And when he speaks of Irene Adler, or) = 9.682142696157907e-45
+p(when he refers to her photograph, it is always under the honourable) = 4.455806343665834e-32
+p(title of _the_ woman.) = 5.405542918034368e-11

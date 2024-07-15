@@ -1,13 +1,13 @@
 import math
 from collections import defaultdict
-from problem1 import read_files, split_data
+from problem1 import read_files, split_data, tokenize
 
 
 def create_bigram_dict(sentences):
     bigram_dict = defaultdict(int)
     word_dict = defaultdict(int)
     for sentence in sentences:
-        words = sentence.lower().split()
+        words = tokenize(sentence)
         prev_word = None
         for word in words:
             if prev_word is not None:
@@ -28,7 +28,7 @@ def build_bigram_model(bigram_dict, word_dict, output_file):
 def evaluate_bigram_model(bigram_dict, word_dict, test_sentences, output_file):
     with open(output_file, 'w') as file:
         for sentence in test_sentences:
-            words = sentence.lower().split()
+            words = tokenize(sentence)
             sent_prob = 1.0
             prev_word = None
             for word in words:
@@ -40,12 +40,12 @@ def evaluate_bigram_model(bigram_dict, word_dict, test_sentences, output_file):
                     else:
                         sent_prob *= 0
                 prev_word = word
-            file.write(f"{sent_prob}\n")
+            file.write(f"p({sentence.strip()}) = {sent_prob}\n")
 
 
 def calculate_perplexity(prob_file, N):
     with open(prob_file, 'r') as file:
-        probs = [float(line.strip()) for line in file]
+        probs = [float(line.split('=')[-1].strip()) for line in file]
 
     # Handle zero probabilities
     non_zero_probs = [p for p in probs if p > 0]
