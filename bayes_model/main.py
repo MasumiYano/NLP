@@ -1,5 +1,7 @@
 import math
 import os
+import random
+
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
@@ -45,11 +47,11 @@ def calculate_vocabulary(positive_review='pos', negative_review='neg'):
     return len(vocabulary)
 
 
-def train_naiveBayes(positive_dict, negative_dict, directories):
+def train_naiveBayes(positive_dict, negative_dict, reviews):
     loglikelihoods = defaultdict(float)
-    total_document = len(os.listdir(directories[0])) + len(os.listdir(directories[1]))
-    Dpos = len(os.listdir(directories[0]))
-    Dneg = len(os.listdir(directories[1]))
+    total_document = len(os.listdir("pos")) + len(os.listdir("neg"))
+    Dpos = len(os.listdir("pos"))
+    Dneg = len(os.listdir("neg"))
     Npos = len(positive_dict)
     Nneg = len(negative_dict)
     prior_dpos = Dpos / total_document
@@ -57,39 +59,81 @@ def train_naiveBayes(positive_dict, negative_dict, directories):
     V = calculate_vocabulary()
     logprior = math.log(prior_dpos) - math.log(prior_dneg)
 
-    for directory in directories:
-        for filename in os.listdir(directory):
-            with open(os.path.join(directory, filename), 'rt') as file:
-                # print(f"Cleaning {directory}/{filename}...")
-                file_content = file.read()
-                cleaned_data = process_data(file_content)
-                for word in cleaned_data:
-                    freq_pos = positive_dict[(word, 1)]
-                    freq_neg = negative_dict[(word, 0)]
-                    proba_wpos = (freq_pos + 1) / (Npos + V)
-                    proba_wneg = (freq_neg + 1) / (Nneg + V)
-                    loglikelihood = math.log(proba_wpos / proba_wneg)
-                    loglikelihoods[word] = loglikelihood
+    for review in reviews:
+        directory = "pos" if review in os.listdir("pos") else "neg"
+        with open(os.path.join(directory, review), 'rt') as file:
+            file_content = file.read()
+            cleaned_data = process_data(file_content)
+            for word in cleaned_data:
+                freq_pos = positive_dict[(word, 1)]
+                freq_neg = negative_dict[(word, 0)]
+                proba_wpos = (freq_pos + 1) / (Npos + V)
+                proba_wneg = (freq_neg + 1) / (Nneg + V)
+                loglikelihood = math.log(proba_wpos / proba_wneg)
+                loglikelihoods[word] = loglikelihood
+
     return logprior, loglikelihoods
 
 
 def predict_naiveBayes(review, logprior, loglikelihoods):
-    cleaned_data = process_data(review)
-    p = logprior
-    for word in cleaned_data:
-        p += loglikelihoods[word]
+    directory = "pos" if review in os.listdir("pos") else "neg"
+    with open(os.path.join(directory, review), 'r') as file:
+        file_content = file.read()
+        cleaned_data = process_data(file_content)
+        p = logprior
+        for word in cleaned_data:
+            p += loglikelihoods[word]
     return p
 
 
+def pick_random_sample():
+    positive_review = os.listdir("pos")
+    negative_review = os.listdir("neg")
+    total_reviews = positive_review + negative_review
+    random.shuffle(total_reviews)
+    split_index = int(len(total_reviews) * 0.8)
+    train_reviews = total_reviews[:split_index]
+    test_reviews = total_reviews[split_index:]
+    return train_reviews, test_reviews
+
+
+def test_naiveBayes(test_reviews, logprior, loglikelihoods):
+    positive_reviews = os.listdir("pos")
+    negative_reviews = os.listdir("neg")
+    result_dict = defaultdict(int)
+    for review in test_reviews:
+        pred_res = predict_naiveBayes(review, logprior, loglikelihoods)
+        result_dict[review] = 1 if pred_res > 0 else 0
+    correct_pred = 0
+    for review, prediction in result_dict.items():
+        if review in positive_reviews and prediction == 1:
+            correct_pred += 1
+        elif review in negative_reviews and prediction == 0:
+            correct_pred += 1
+    return correct_pred / len(test_reviews), result_dict
+
+
+def error_analysis(result_dict):
+    with open("error_analysis.txt", 'w') as file:
+
+
+
 def main():
-    cleaned_data = process_data("This is a great movie !")
-    print(cleaned_data)
+    # cleaned_data = process_data("This is a great movie !")
+    # print(cleaned_data)
     positive_dict = count_reviews("pos")
     negative_dict = count_reviews("neg")
-    logprior, loglikelihoods = train_naiveBayes(positive_dict, negative_dict, ['pos', 'neg'])
-    test_review = "Great movie !"
-    p = predict_naiveBayes(test_review, logprior, loglikelihoods)
-    print(f"This expected output is {p}")
+    train_reviews, test_reviews = pick_random_sample()
+    print('Training Naive Bayes Model...')
+    logprior, loglikelihoods = train_naiveBayes(positive_dict, negative_dict, train_reviews)
+    print('Training done.')
+    # review = "cv700_23163.txt"
+    # p = predict_naiveBayes(review, logprior, loglikelihoods)
+    # print(f"This expected output is {p}")
+    print('Testing Naive Bayes Model....')
+    model_accuracy, result_dict = test_naiveBayes(test_reviews, logprior, loglikelihoods)
+    print('Testing done')
+    print(f"Naive Bayes accuracy = {model_accuracy:.4f}")
 
 
 if __name__ == '__main__':
