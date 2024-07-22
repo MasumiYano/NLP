@@ -75,14 +75,11 @@ def train_naiveBayes(positive_dict, negative_dict, reviews):
     return logprior, loglikelihoods
 
 
-def predict_naiveBayes(review, logprior, loglikelihoods):
-    directory = "pos" if review in os.listdir("pos") else "neg"
-    with open(os.path.join(directory, review), 'r') as file:
-        file_content = file.read()
-        cleaned_data = process_data(file_content)
-        p = logprior
-        for word in cleaned_data:
-            p += loglikelihoods[word]
+def predict_naiveBayes(review_text, logprior, loglikelihoods):
+    cleaned_data = process_data(review_text)
+    p = logprior
+    for word in cleaned_data:
+        p += loglikelihoods[word]
     return p
 
 
@@ -102,7 +99,10 @@ def test_naiveBayes(test_reviews, logprior, loglikelihoods):
     negative_reviews = os.listdir("neg")
     result_dict = defaultdict(int)
     for review in test_reviews:
-        pred_res = predict_naiveBayes(review, logprior, loglikelihoods)
+        directory = "pos" if review in os.listdir("pos") else "neg"
+        with open(os.path.join(directory, review), 'r') as file:
+            review_text = file.read()
+        pred_res = predict_naiveBayes(review_text, logprior, loglikelihoods)
         result_dict[review] = 1 if pred_res > 0 else 0
     correct_pred = 0
     for review, prediction in result_dict.items():
@@ -114,26 +114,46 @@ def test_naiveBayes(test_reviews, logprior, loglikelihoods):
 
 
 def error_analysis(result_dict):
-    with open("error_analysis.txt", 'w') as file:
+    positive_reviews = os.listdir("pos")
+    negative_reviews = os.listdir("neg")
 
+    with open("error_analysis.txt", 'w') as file:
+        file.write(f"{'Truth':<10} {'Predicted':<10} {'Review':<50}\n")
+        for review, prediction in result_dict.items():
+            if (review in positive_reviews and prediction == 0) or (review in negative_reviews and prediction == 1):
+                truth = 1 if review in positive_reviews else 0
+                with open(os.path.join("pos" if truth == 1 else "neg", review), 'r') as review_file:
+                    review_text = review_file.read().strip()
+                    review_words = review_text.split()
+                    if len(review_words) > 20:
+                        review_text = " ".join(review_words[:20]) + "..."
+                file.write(f"{truth:<10} {prediction:<10} {review_text:<50}\n")
+
+
+def predict_lionking_reviews(logprior, loglikelihoods):
+    with open("LionKing_MovieReviews.txt", 'r') as input_file, open("LionKing_Output.txt", 'w') as output_file:
+        for review in input_file:
+            review_text = review.strip()
+            sentiment_score = predict_naiveBayes(review_text, logprior, loglikelihoods)
+            sentiment = 1 if sentiment_score > 0 else 0
+            output_file.write(f"{review_text} | Sentiment: {sentiment}\n")
 
 
 def main():
-    # cleaned_data = process_data("This is a great movie !")
-    # print(cleaned_data)
     positive_dict = count_reviews("pos")
     negative_dict = count_reviews("neg")
     train_reviews, test_reviews = pick_random_sample()
     print('Training Naive Bayes Model...')
     logprior, loglikelihoods = train_naiveBayes(positive_dict, negative_dict, train_reviews)
     print('Training done.')
-    # review = "cv700_23163.txt"
-    # p = predict_naiveBayes(review, logprior, loglikelihoods)
-    # print(f"This expected output is {p}")
     print('Testing Naive Bayes Model....')
     model_accuracy, result_dict = test_naiveBayes(test_reviews, logprior, loglikelihoods)
     print('Testing done')
     print(f"Naive Bayes accuracy = {model_accuracy:.4f}")
+
+    error_analysis(result_dict)
+
+    predict_lionking_reviews(logprior, loglikelihoods)
 
 
 if __name__ == '__main__':
