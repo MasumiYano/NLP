@@ -37,7 +37,7 @@ def my_model(vocab_size):
     return model, model.summary()
 
 
-def train(model, X, y, epochs=100, verbose=2):
+def train(model, X, y, epochs=500, verbose=2):
     model.fit(X, y, epochs=epochs, verbose=verbose)
 
 
@@ -80,7 +80,7 @@ def main():
     train(model, X, y)
 
     # Phase 4: Generate the text
-    generated_text = generate_text(model, start_seq, 50, tokenizer)
+    generated_text = generate_text(model, start_seq, 500, tokenizer)
     print(f"Generate Text: {generated_text}")
 
 
